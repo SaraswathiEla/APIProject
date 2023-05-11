@@ -31,7 +31,7 @@ public class createPetStore {
 		System.out.println(json);
 		baseURI="https://petstore.swagger.io";
 		
-		given().header("accept","application/json").headers("Content-Type","application/json")
+		given().log().all().header("accept","application/json").headers("Content-Type","application/json")
 		.body(json)
 		
 		.when().post("/v2/pet")
